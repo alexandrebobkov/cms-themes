@@ -1,0 +1,10 @@
+routes:
+
+collections:
+  /:
+    permalink: /services/
+    template: index
+
+taxonomies:
+  tag: /tag/services/
+  author: /author/services/
