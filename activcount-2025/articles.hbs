@@ -2,18 +2,8 @@
 
 <main class="site-main">
 
-    {{#post}}
-        {{> "content" width="narrow"}}
-    {{/post}}
-
-    {{#is "post"}}
-        {{#if @custom.show_related_posts}}
-            {{> "related-posts"}}
+    {{#if @custom.show_featured_posts}}
+            {{> "featured-posts"}}
         {{/if}}
-
-        {{#post}}
-            {{> "comments"}}
-        {{/post}}
-    {{/is}}
 
 </main>
