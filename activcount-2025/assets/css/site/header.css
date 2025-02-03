@@ -3,7 +3,7 @@
 }
 
 .gh-head-logo {
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
     font-weight: 800;
 }
 
