@@ -1,3 +1,9 @@
+{{!< default}}
+
+{{#post}}
+{{!-- ABOUT page template --}}
+{{!-- Everything inside the #post tags pulls data from the page --}}
+
 {{#foreach posts}}
     {{#has tag="training"}}
         <article class="post">
@@ -15,3 +21,5 @@
         </article>
     {{/has}}
 {{/foreach}}
+
+{{/posr}}
