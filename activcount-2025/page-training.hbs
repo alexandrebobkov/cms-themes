@@ -3,8 +3,12 @@
 
     {{#page}}
         <h1>{{title}}</h1>
-        <div>{{content}}</div>
+        {{content}}>
     {{/page}}
+
+    {{#post}}
+        {{> "content" width="wide"}}
+    {{/post}}
 
     {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
