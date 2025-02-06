@@ -74,9 +74,8 @@
         {{{body}}}
             {{#get "posts" limit="all" filter="tags:home_2025"}}
                 {{#foreach posts}}
+                {{#post}}
                         {{content}}
-                    {{#post}}
-                        {{> "content" width="narrow"}}
                     {{/post}}
                 {{/foreach}}
             {{/get}}
