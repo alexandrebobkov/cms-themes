@@ -65,19 +65,10 @@
 
     {{#is "home"}}
         {{> "cover"}}       
-        {{!-- {{#if @custom.show_featured_posts}}
+        {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
-        {{/if}} --}}
+        {{/if}}
     {{/is}}
-
-
-    {{!--
-    {{#get "posts" limit="all" filter="tags:home_2025"}}
-        {{#foreach posts}}
-            {{content}}
-        {{/foreach}}
-    {{/get}}
-    --}}
 
     <div class="site-content">
         {{{body}}}
