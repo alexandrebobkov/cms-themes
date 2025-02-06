@@ -65,14 +65,20 @@
 
     {{#is "home"}}
         {{> "cover"}}
+        {{#get "posts" filter="primary_tag:venus-flytrap" limit="6" }}
+                    {{! Use the foreach helper to loop through available posts }}
+                    {{#foreach posts}}
+                        <article class="p-post-card">
+                            {{! Use the img_url helper to bring in the post's feature image. }}
+                            <img src="{{img_url feature_image size="m"}}" alt="{{feature_image_alt}}" />
+                            <h3><a href="{{url}}">{{title}}</a></h3>
+                        </article>
+                    {{/foreach}}
+                {{/get}}
+                
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
         {{/if}}
-
-        <p>kkk</p>
-        {{#post}}
-            {{> "content" width="wide"}}
-        {{/post}}
     {{/is}}
 
     <div class="site-content">
