@@ -68,7 +68,7 @@
            
             {{#get "posts" limit="all" filter="tags:home_2025"}}
                 {{#foreach posts}}
-                    <div class="content">
+                    <div class="site-content">
                         {{content}}
                     </div>
                     {{#post}}
@@ -85,17 +85,6 @@
     {{/is}}
 
     <div class="site-content">
-        {{#get "posts" limit="all" filter="tags:home_2025"}}
-                {{#foreach posts}}
-                    <div class="content">
-                        {{content}}
-                    </div>
-                    {{#post}}
-                        {{> "content" width="wide"}}
-                        {{content}}
-                    {{/post}}
-                {{/foreach}}
-            {{/get}}
         {{{body}}}
     </div>
 
