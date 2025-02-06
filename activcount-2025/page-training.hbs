@@ -4,6 +4,10 @@
 {{!-- Everything inside the #post tags pulls data from the post page --}}
 
 <main id="main">
+    {{#page}}
+        <h1>{{title}}</h1>
+        <div>{{content}}</div>
+    {{/page}}
     <section class="post">
 
         {{#foreach posts}}
