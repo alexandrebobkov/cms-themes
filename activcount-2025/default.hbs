@@ -68,6 +68,10 @@
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
         {{/if}}
+
+        {{#post}}
+            {{> "content" width="wide"}}
+        {{/post}}
     {{/is}}
 
     <div class="site-content">
