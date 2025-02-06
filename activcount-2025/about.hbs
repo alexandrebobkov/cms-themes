@@ -3,8 +3,8 @@
 
 <main class="site-main">
 
-    {{#post}}
-        {{> "featured-posts" width="narrow"}}
-    {{/post}}
+    {{#if @custom.show_featured_posts}}
+            {{> "featured-posts"}}
+    {{/if}}
 
 </main>
