@@ -65,7 +65,7 @@
 
     {{#is "home"}}
         {{> "cover"}}
-            {{#post}}
+           
             {{#get "posts" limit="all" filter="tags:home_2025"}}
                 {{#foreach posts}}
                     <div class="content">
@@ -77,7 +77,7 @@
                     {{/post}}
                 {{/foreach}}
             {{/get}}
-            {{/post}}
+            
 
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
