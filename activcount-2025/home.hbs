@@ -14,7 +14,7 @@
     </header> --}}
 
     <article class="single-content gh-content gh-canvas">        
-        {{!-- Featured Post --}}
+        {{!-- Display Posts tagged with home_2025 --}}
         {{#is "home"}}
             {{#get "posts" limit="all" filter="tags:home_2025"}}
                 {{#foreach posts}}
@@ -24,6 +24,7 @@
                     {{content}}
                 {{/foreach}}
             {{/get}}
+            {{!-- Display home page --}}
             {{#post}}
                 {{> "content" width="wide"}}
             {{/post}}
