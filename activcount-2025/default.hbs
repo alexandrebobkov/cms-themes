@@ -65,7 +65,7 @@
 
     {{#is "home"}}
         {{> "cover"}}
-        {{#get "posts" filter="primary_tag:venus-flytrap" limit="6" }}
+            {{#get "posts" filter="primary_tag:venus-flytrap" limit="6" }}
                     {{! Use the foreach helper to loop through available posts }}
                     {{#foreach posts}}
                         <article class="p-post-card">
@@ -74,8 +74,8 @@
                             <h3><a href="{{url}}">{{title}}</a></h3>
                         </article>
                     {{/foreach}}
-                {{/get}}
-                
+            {{/get}}
+
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
         {{/if}}
