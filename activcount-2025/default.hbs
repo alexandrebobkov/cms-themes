@@ -64,7 +64,16 @@
     </header>
 
     {{#is "home"}}
-    {{#get "posts" limit="all" filter="tags:home_2025"}}
+        {{> "cover"}}       
+        {{#if @custom.show_featured_posts}}
+            {{> "featured-posts"}}
+        {{/if}}
+    {{/is}}
+
+    <div class="site-content">
+        {{{body}}}
+        <div class="site-main">
+            {{#get "posts" limit="all" filter="tags:home_2025"}}
                 {{#foreach posts}}
                     <div class="site-main">
                         {{content}}
@@ -74,15 +83,7 @@
                     {{/post}}
                 {{/foreach}}
             {{/get}}
-        {{> "cover"}}            
-
-        {{#if @custom.show_featured_posts}}
-            {{> "featured-posts"}}
-        {{/if}}
-    {{/is}}
-
-    <div class="site-content">
-        {{{body}}}
+        </div>
     </div>
 
     <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">
