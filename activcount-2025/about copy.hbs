@@ -1,0 +1,16 @@
+{{!-- ABOUT Page Template --}}
+{{!< default}}
+
+<main class="site-main">
+
+    {{#page}}
+        <h1>{{title}}</h1>
+        <div>{{content}}</div>
+    {{/page}}
+    Hello
+
+    {{#if @custom.show_featured_posts}}
+            {{> "featured-posts"}}
+    {{/if}}
+
+</main>
