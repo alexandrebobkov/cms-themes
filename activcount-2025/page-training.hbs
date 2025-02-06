@@ -9,4 +9,22 @@
             {{> "featured-posts"}}
     {{/if}}
 
+    <form data-members-form= >
+    <input data-members-label type="hidden" value="Turntable buying guide" />
+    <label>
+        Name
+        <input data-members-name />
+    </label>
+    <label>
+        Email
+        <input data-members-email type="email" required />
+    </label>
+    <button>
+        Sign up
+    </button>
+    <p class="loading">⏲️ Please hold while we check our collection.</p>
+    <p class="error">❗Something's gone wrong. Please try again.</p>
+    <p class="success">🎸 Success! Check your inbox for our email.</p>
+</form>
+
 </main>
