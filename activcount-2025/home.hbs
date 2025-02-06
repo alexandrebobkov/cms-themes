@@ -16,17 +16,14 @@
     <article class="single-content gh-content gh-canvas">        
         {{!-- Featured Post --}}
         {{#is "home"}}
-
-        {{#get "posts" limit="all" filter="tags:home_2025"}}
-        {{#foreach posts}}
+            {{#get "posts" limit="all" filter="tags:home_2025"}}
+                {{#foreach posts}}
         {{!--<header class="major">
              <h1>{{title}}</h1> 
         </header>--}}
-        {{!-- <div class="content"> --}}
-            {{content}}
-        {{!-- </div> --}}
-        {{/foreach}}
-        {{/get}}
+                    {{content}}
+                {{/foreach}}
+            {{/get}}
         {{/is}}
     </article>
 </main>
