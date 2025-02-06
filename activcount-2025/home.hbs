@@ -13,7 +13,7 @@
         {{/if}}
     </header>
 
-    <section class="single post">        
+    <article class="single post">        
         {{!-- Featured Post --}}
         {{#is "home"}}
 
@@ -28,7 +28,7 @@
         {{/foreach}}
         {{/get}}
         {{/is}}
-    </section>
+    </article>
 </main>
 
 {{#contentFor "body_class"}}{{#if @site.cover_image}} with-full-cover is-head-transparent{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}
