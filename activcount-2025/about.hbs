@@ -3,10 +3,11 @@
 
 <main class="site-main">
 
-    <div class="site-content">
-        {{{body}}}
-    </div>
-    
+    {{#page}}
+        <h1>{{title}}</h1>
+        <div>{{content}}</div>
+    {{/page}}
+
     {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
     {{/if}}
