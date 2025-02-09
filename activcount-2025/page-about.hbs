@@ -9,9 +9,8 @@
     {{/page}}
 
     {{#post}}
-                {{!-- {{> "content" width="wide"}} --}}
-                {{content}}
-            {{/post}}
+        {{> "content" width="wide"}}
+    {{/post}}
 
     {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
