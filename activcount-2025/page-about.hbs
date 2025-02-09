@@ -8,6 +8,11 @@
         <div>{{content}}</div>
     {{/page}}
 
+    {{#post}}
+                {{!-- {{> "content" width="wide"}} --}}
+                {{> "content"}}
+            {{/post}}
+
     {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
     {{/if}}
