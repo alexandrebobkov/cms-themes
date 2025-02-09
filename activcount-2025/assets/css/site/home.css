@@ -1,5 +1,5 @@
 .site {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-height: 100vh;
 }
