@@ -1,0 +1,41 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file --}}
+{{!-- Home page template into the {body} of the default.hbs template --}}
+
+{{!-- Main --}}
+
+<main class="site-main">
+    {{!-- <header class="feed-header gh-canvas">
+        {{#if @custom.feed_title}}
+            <div class="feed-header-wrapper">
+                <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
+            </div>
+        {{/if}}
+    </header> --}}
+
+    <article class="single-content gh-content gh-canvas">        
+        {{!-- Display Posts tagged with home_2025 --}}
+        {{#is "home"}}
+            {{#get "posts" limit="all" filter="tags:home_2025"}}
+                {{#foreach posts}}
+        {{!--<header class="major">
+             <h1>{{title}}</h1> 
+        </header>--}}
+                    {{content}}
+                {{/foreach}}
+            {{/get}}
+            {{!-- Display home page --}}
+            {{#post}}
+                {{!-- {{> "content" width="wide"}} --}}
+                {{> "content"}}
+            {{/post}}
+        {{/is}}
+        {{#page}}
+        <h1>{{title}}</h1>
+        <div>{{content}}</div>
+    {{/page}}
+    </article>
+
+</main>
+
+{{#contentFor "body_class"}}{{#if @site.cover_image}} with-full-cover is-head-transparent{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}
