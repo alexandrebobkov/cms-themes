@@ -120,6 +120,10 @@
             "address_2": {
                 "type": "text",
                 "default": ""
+            },
+            "office_phone_number": {
+                "type": "text",
+                "default": "+1 (343) 202 - 2043"
             }
         }
     },
