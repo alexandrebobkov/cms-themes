@@ -112,6 +112,14 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "address_1": {
+                "type": "text",
+                "default": "M060 - 1554 Carling Ave. Ottawa (ON) K1Z 7M4"
+            },
+            "address_2": {
+                "type": "text",
+                "default": ""
             }
         }
     },
