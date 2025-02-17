@@ -16,19 +16,17 @@
     <article class="single-content gh-content gh-canvas">        
         {{!-- Display Posts tagged with home_2025 --}}
         {{#is "home"}}
+            
+            {{!-- Display home page --}}
+            {{#post}}
+                {{> "content-home"}}
+            {{/post}}
+
             {{#get "posts" limit="all" filter="tags:home_2025"}}
                 {{#foreach posts}}
-        {{!--<header class="major">
-             <h1>{{title}}</h1> 
-        </header>--}}
                     {{content}}
                 {{/foreach}}
             {{/get}}
-            {{!-- Display home page --}}
-            {{#post}}
-                {{!-- {{> "content" width="wide"}} --}}
-                {{> "content-home"}}
-            {{/post}}
         {{/is}}
         {{!--#page}}
             <h1>{{title}}</h1>
